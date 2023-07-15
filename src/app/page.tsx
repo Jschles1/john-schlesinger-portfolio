@@ -174,7 +174,7 @@ export default function Home() {
         <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem]">
           <h1 className="font-bold text-[2.5rem] text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem]">
             Nice to meet you! I&apos;m{" "}
-            <span className="border-b-4 border-green">Adam Keyes.</span>
+            <span className="border-b-4 border-green">Adam Keyes</span>.
           </h1>
 
           <p className="text-gray mb-6 md:max-w-[85%]">
