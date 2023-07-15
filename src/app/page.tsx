@@ -71,9 +71,9 @@ function TechnologyItem({
   experience: string;
 }) {
   return (
-    <div className="flex flex-col items-center mb-6 last:mb-0">
-      <p className="text-white text-[2rem] font-bold">{name}</p>
-      <p className="text-gray">{experience}</p>
+    <div className="flex flex-col items-center mb-6 last:mb-0 md:mb-0 md:basis1/2 md:w-1/2 md:items-start">
+      <p className="text-white text-[2rem] font-bold md:text-[3rem]">{name}</p>
+      <p className="text-gray md:text-[1.125rem]">{experience}</p>
     </div>
   );
 }
@@ -94,16 +94,16 @@ function ProjectItem({
   projectLink: string;
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:basis-[48%] md:w-[48%]">
       <div className="relative mb-[1.25rem]">
-        {/* <picture>
+        <picture>
           <source media="(min-width:1280px)" srcSet={imageDesktop.src} />
           <Image
             src={image}
             alt={`${name} screenshot`}
             className="w-full h-auto"
           />
-        </picture> */}
+        </picture>
       </div>
       <p className="text-white text-[1.5rem] font-bold">{name}</p>
       <div className="mt-[0.438rem] mb-[1.25rem] flex items-center gap-[1.125rem]">
@@ -171,14 +171,14 @@ export default function Home() {
           alt="White Circle"
         />
       </header>
-      <main className="mt-[19.438rem] px-4 md:mt-[8.925rem]">
+      <main className="mt-[19.438rem] px-4 md:mt-[8.925rem] md:px-8">
         <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem]">
           <h1 className="font-bold text-[2.5rem] text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem]">
             Nice to meet you! I&apos;m{" "}
             <span className="border-b-4 border-green">Adam Keyes.</span>
           </h1>
 
-          <p className="text-gray mb-6">
+          <p className="text-gray mb-6 md:max-w-[85%]">
             Based in the UK, I&apos;m a front-end developer passionate about
             building accessible web apps that users love.
           </p>
@@ -188,28 +188,30 @@ export default function Home() {
 
         <hr className="text-white" />
 
-        <section className="py-10">
+        <section className="py-10 md:pt-[3.25rem] md:pb-[6.25rem] md:flex md:flex-wrap md:items-center md:gap-y-[3.25rem]">
           {TECHNOLOGIES.map(({ name, experience }) => (
             <TechnologyItem key={name} name={name} experience={experience} />
           ))}
         </section>
 
-        {/* <Image
+        <Image
           src={PatternRings}
-          // Needed to overide top from figma by adding 1 rem
-          className="absolute -z-20 top-[81.438rem] left-[11.813rem] h-[129px]"
+          // Mobile: Needed to overide top from figma by adding 1 rem
+          className="absolute -z-20 top-[81.438rem] left-[11.813rem] h-[129px] md:top-[65.438rem] md:left-[35.625rem]"
           alt="Pattern of Rings"
-        /> */}
+        />
 
-        <hr className="text-white" />
+        <hr className="text-white md:hidden" />
 
-        <section className="py-20 text-white">
-          <div className="flex items-start justify-between mb-8">
-            <h2 className="text-[2.5rem] font-bold">Projects</h2>
+        <section className="py-20 text-white md:pt-0 md:pb-[6.25rem]">
+          <div className="flex items-start justify-between mb-8 md:items-center md:mb-[3.75rem]">
+            <h2 className="text-[2.5rem] font-bold md:text-[4.5rem]">
+              Projects
+            </h2>
             <Button>Contact Me</Button>
           </div>
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:flex-row md:flex-wrap md:gap-x-[1.25rem] md:justify-between">
             {PROJECTS.map((project) => (
               <ProjectItem key={project.name} {...project} />
             ))}
