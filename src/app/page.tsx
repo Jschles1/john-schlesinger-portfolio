@@ -96,14 +96,14 @@ function ProjectItem({
   return (
     <div className="flex flex-col">
       <div className="relative mb-[1.25rem]">
-        <picture>
+        {/* <picture>
           <source media="(min-width:1280px)" srcSet={imageDesktop.src} />
           <Image
             src={image}
             alt={`${name} screenshot`}
             className="w-full h-auto"
           />
-        </picture>
+        </picture> */}
       </div>
       <p className="text-white text-[1.5rem] font-bold">{name}</p>
       <div className="mt-[0.438rem] mb-[1.25rem] flex items-center gap-[1.125rem]">
@@ -142,38 +142,38 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen relative w-full mx-auto max-w-[1440px]">
-      <header className="text-center text-white w-[154px] mx-auto pt-[1.25rem]">
-        <p className="font-bold text-2xl tracking-tighter mb-[1.25rem]">
+      <header className="text-center text-white w-[154px] mx-auto pt-[1.25rem] md:text-left md:flex md:items-center md:justify-between md:w-full md:px-[1.875rem] md:pt-[1.875rem]">
+        <p className="font-bold text-2xl tracking-tighter mb-[1.25rem] md:mb-0">
           adamkeyes
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between md:gap-8">
           {HEADER_LINKS.map(({ href, icon, alt }) => (
             <HeaderLink key={alt} href={href} icon={icon} alt={alt} />
           ))}
         </div>
-        <picture className="absolute -z-10 top-0 left-0 right-0 mx-0">
+        <picture className="absolute -z-10 top-0 left-0 right-0 mx-0 md:left-auto">
           <source media="(min-width:768px)" srcSet={ImageProfileTablet.src} />
           <source media="(min-width:1280px)" srcSet={ImageProfileDesktop.src} />
           <Image
             src={ImageProfileMobile}
             alt="Adam Keyes photo"
-            className="h-[383px] w-[174px] mx-auto"
+            className="h-[383px] w-[174px] md:h-[600px] md:w-[322px] mx-auto"
           />
         </picture>
         <Image
           src={PatternRings}
-          className="absolute -z-20 top-[7.75rem] left-[-13rem] h-[129px]"
+          className="absolute -z-20 top-[7.75rem] left-[-13rem] h-[129px] md:left-auto md:right-[31.438rem]"
           alt="Pattern of Rings"
         />
         <Image
           src={PatternCircle}
-          className="absolute -z-20 top-[15.875rem] left-[19.438rem]"
+          className="absolute -z-20 top-[15.875rem] left-[19.438rem] md:left-[43.875rem] md:top-[29.438rem] md:-z-10"
           alt="White Circle"
         />
       </header>
-      <main className="mt-[19.438rem] px-4">
-        <section className="text-center text-white pb-20">
-          <h1 className="text-bold text-[2.5rem] text-white leading-[100%] mb-6">
+      <main className="mt-[19.438rem] px-4 md:mt-[8.925rem]">
+        <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem]">
+          <h1 className="font-bold text-[2.5rem] text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem]">
             Nice to meet you! I&apos;m{" "}
             <span className="border-b-4 border-green">Adam Keyes.</span>
           </h1>
@@ -194,12 +194,12 @@ export default function Home() {
           ))}
         </section>
 
-        <Image
+        {/* <Image
           src={PatternRings}
           // Needed to overide top from figma by adding 1 rem
           className="absolute -z-20 top-[81.438rem] left-[11.813rem] h-[129px]"
           alt="Pattern of Rings"
-        />
+        /> */}
 
         <hr className="text-white" />
 
@@ -300,11 +300,11 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
+        {/* <Image
           src={PatternRings}
           className="absolute bottom-[17.313rem] left-[-13rem] h-[129px]"
           alt="Pattern of Rings"
-        />
+        /> */}
       </footer>
     </div>
   );
