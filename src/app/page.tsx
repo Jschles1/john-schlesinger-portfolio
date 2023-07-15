@@ -8,10 +8,8 @@ import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -171,6 +169,7 @@ export default function Home() {
           alt="White Circle"
         />
       </header>
+
       <main className="mt-[19.438rem] px-4 md:mt-[8.925rem] md:px-8">
         <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem]">
           <h1 className="font-bold text-[2.5rem] text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem]">
@@ -218,19 +217,23 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="px-4 py-[3.75rem] bg-dark-gray">
-        <div className="text-center mb-[3.125rem]">
-          <h3 className="text-white text-[2.5rem] font-bold mb-[1.25rem]">
+
+      <footer className="px-4 py-[3.75rem] bg-dark-gray md:px-8 md:pt-0 md:pb-[2.5rem]">
+        <div className="text-center mb-[3.125rem] md:pt-[3.75rem] md:px-[8.125rem]">
+          <h3 className="text-white text-[2.5rem] font-bold mb-[1.25rem] md:text-7xl">
             Contact
           </h3>
-          <p className="text-gray">
+          <p className="text-gray md:text-[1.25rem]">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="md:px-[8.125rem]"
+          >
             <FormField
               control={form.control}
               name="name"
@@ -291,22 +294,22 @@ export default function Home() {
 
         <hr className="text-white" />
 
-        <div className="text-center text-white w-[154px] mx-auto mt-10">
-          <p className="font-bold text-2xl tracking-tighter mb-[1.25rem]">
+        <div className="text-center text-white w-[154px] mx-auto mt-10 md:text-left md:flex md:items-center md:justify-between md:w-full md:px-[1.875rem] md:pt-[1.875rem] md:mt-0">
+          <p className="font-bold text-2xl tracking-tighter mb-[1.25rem] md:mb-0">
             adamkeyes
           </p>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between md:gap-8">
             {HEADER_LINKS.map(({ href, icon, alt }) => (
               <HeaderLink key={alt} href={href} icon={icon} alt={alt} />
             ))}
           </div>
         </div>
 
-        {/* <Image
+        <Image
           src={PatternRings}
-          className="absolute bottom-[17.313rem] left-[-13rem] h-[129px]"
+          className="absolute bottom-[17.313rem] left-[-13rem] h-[129px] md:bottom-[8.125rem] md:left-auto md:right-[37.875rem]"
           alt="Pattern of Rings"
-        /> */}
+        />
       </footer>
     </div>
   );
