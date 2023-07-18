@@ -152,6 +152,8 @@ function ProjectItem({
 
 export default function Home() {
   const formRef = React.useRef<HTMLFormElement>(null);
+  const [messageButtonText, setMessageButtonText] =
+    React.useState<string>("Send Message");
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -161,9 +163,16 @@ export default function Home() {
     },
   });
 
-  function onSubmit(values: FormSchema) {
-    // No requirements for submitting form successfully, so just log values
-    console.log(values);
+  async function onSubmit(values: FormSchema) {
+    const response = await fetch("/api/send-message", {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
+
+    if (response.ok) {
+      form.reset();
+      setMessageButtonText("Message Sent!");
+    }
   }
 
   function handleContactMeClick() {
@@ -328,7 +337,7 @@ export default function Home() {
                   )}
                 />
                 <div className="mb-[5.438rem] flex flex-row-reverse">
-                  <Button type="submit">Send Message</Button>
+                  <Button type="submit">{messageButtonText}</Button>
                 </div>
               </form>
             </Form>
