@@ -70,7 +70,7 @@ function TechnologyItem({
   experience: string;
 }) {
   return (
-    <div className="flex flex-col items-center mb-6 last:mb-0 md:mb-0 md:basis1/2 md:w-1/2 md:items-start lg:basis-1/3 lg:w-1/3 xl:basis-1/3 xl:w-1/3 2xl:basis-1/3 2xl:w-1/3">
+    <div className="flex flex-col items-center mb-6 last:mb-0 md:mb-0 md:basis1/2 md:w-1/2 md:items-start xl:basis-1/3 xl:w-1/3 2xl:basis-1/3 2xl:w-1/3">
       <p className="text-white text-[2rem] font-bold md:text-[3rem]">{name}</p>
       <p className="text-gray md:text-[1.125rem]">{experience}</p>
     </div>
@@ -120,7 +120,7 @@ function ProjectItem({
           />
         </picture>
         {isOverlayActive && (
-          <div className="bg-black bg-opacity-75 z-20 hidden absolute h-full w-full top-0 lg:flex flex-col items-center justify-center">
+          <div className="bg-black bg-opacity-75 z-20 hidden absolute h-full w-full top-0 xl:flex flex-col items-center justify-center">
             <a href={projectLink} className="mb-12">
               <Button>View Project</Button>
             </a>
@@ -131,14 +131,14 @@ function ProjectItem({
         )}
       </div>
       <p className="text-white text-[1.5rem] font-bold">{name}</p>
-      <div className="mt-[0.438rem] mb-[1.25rem] flex items-center gap-[1.125rem] lg:mb-0 xl:mb-0 2xl:mb-0">
+      <div className="mt-[0.438rem] mb-[1.25rem] flex items-center gap-[1.125rem] xl:mb-0 2xl:mb-0">
         {technologies.map((technology) => (
           <p key={technology} className="text-gray text-[1.125rem]">
             {technology}
           </p>
         ))}
       </div>
-      <div className="flex items-center gap-8 lg:hidden">
+      <div className="flex items-center gap-8 xl:hidden">
         <a href={projectLink}>
           <Button>View Project</Button>
         </a>
@@ -172,17 +172,17 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen relative w-full overflow-x-hidden">
-      <div className="w-full mx-auto relative max-w-[1440px] lg:px-[10.313rem] xl:px-[10.313rem] 2xl:px-[10.313rem]">
-        <header className="text-center text-white w-[154px] mx-auto pt-[1.25rem] md:text-left md:flex md:items-center md:justify-between md:w-full md:px-[1.875rem] md:pt-[1.875rem] lg:px-0 xl:px-0 2xl:px-0">
+      <div className="w-full mx-auto relative max-w-[1440px] xl:px-[10.313rem] 2xl:px-[10.313rem]">
+        <header className="text-center text-white w-[154px] mx-auto pt-[1.25rem] md:text-left md:flex md:items-center md:justify-between md:w-full md:px-[1.875rem] md:pt-[1.875rem] xl:px-0 2xl:px-0">
           <p className="font-bold text-2xl tracking-tighter mb-[1.25rem] md:mb-0">
             adamkeyes
           </p>
-          <div className="flex items-center justify-between md:gap-8 lg:mr-[1.875rem] xl:mr-[1.875rem] 2xl:mr-[1.875rem]">
+          <div className="flex items-center justify-between md:gap-8 xl:mr-[1.875rem] 2xl:mr-[1.875rem]">
             {HEADER_LINKS.map(({ href, icon, alt }) => (
               <HeaderLink key={alt} href={href} icon={icon} alt={alt} />
             ))}
           </div>
-          <picture className="absolute -z-10 top-0 left-0 right-0 mx-0 md:left-auto lg:right-[10.313rem] xl:right-[10.313rem] 2xl:right-[10.313rem]">
+          <picture className="absolute -z-10 top-0 left-0 right-0 mx-0 md:left-auto xl:right-[10.313rem] 2xl:right-[10.313rem]">
             <source media="(min-width:768px)" srcSet={ImageProfileTablet.src} />
             <source
               media="(min-width:1280px)"
@@ -191,29 +191,29 @@ export default function Home() {
             <Image
               src={ImageProfileMobile}
               alt="Adam Keyes photo"
-              className="h-[383px] w-[174px] md:h-[600px] md:w-[322px] lg:h-[720px] lg:w-[445px] xl:h-[720px] xl:w-[445px] 2xl:h-[720px] 2xl:w-[445px] mx-auto"
+              className="h-[383px] w-[174px] md:h-[600px] md:w-[322px] xl:h-[720px] xl:w-[445px] 2xl:h-[720px] 2xl:w-[445px] mx-auto"
             />
           </picture>
           <Image
             src={PatternRings}
-            className="absolute -z-20 top-[7.75rem] left-[-13rem] h-[129px] md:left-auto md:right-[31.438rem] lg:top-[8.313rem] xl:top-[8.313rem] 2xl:top-[8.313rem] lg:right-[63.125rem] xl:right-[63.125rem] 2xl:right-[63.125rem]"
+            className="absolute -z-20 top-[7.75rem] left-[-13rem] h-[129px] md:left-auto md:right-[31.438rem] xl:top-[8.313rem] 2xl:top-[8.313rem] xl:right-[63.125rem] 2xl:right-[63.125rem]"
             alt="Pattern of Rings"
           />
           <Image
             src={PatternCircle}
-            className="absolute -z-20 top-[15.875rem] left-[19.438rem] md:left-[43.875rem] md:top-[29.438rem] md:-z-10 lg:left-[47.875rem] xl:left-[47.875rem] 2xl:left-[47.875rem] lg:top-[32.563rem] xl:top-[32.563rem] 2xl:top-[32.563rem]"
+            className="absolute -z-20 top-[15.875rem] left-[19.438rem] md:left-[43.875rem] md:top-[29.438rem] md:-z-10 xl:left-[47.875rem] 2xl:left-[47.875rem] xl:top-[32.563rem] 2xl:top-[32.563rem]"
             alt="White Circle"
           />
         </header>
 
-        <main className="mt-[19.438rem] px-4 md:mt-[8.925rem] md:px-8 lg:px-0 xl:px-0 2xl:px-0 lg:mt-[7.938rem] xl:mt-[7.938rem] 2xl:mt-[7.938rem]">
-          <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem] lg:max-w-[706px] xl:max-w-[706px] 2xl:max-w-[706px] lg:pb-[13.688rem] xl:pb-[13.688rem] 2xl:pb-[13.688rem]">
-            <h1 className="font-bold text-[2.5rem] tracking-tighter text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem] lg:text-[5.5rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
+        <main className="mt-[19.438rem] px-4 md:mt-[8.925rem] md:px-8 xl:px-0 2xl:px-0 xl:mt-[7.938rem] 2xl:mt-[7.938rem]">
+          <section className="text-center text-white pb-20 md:max-w-[450px] md:text-left md:pb-[3.75rem] xl:max-w-[706px] 2xl:max-w-[706px] xl:pb-[13.688rem] 2xl:pb-[13.688rem]">
+            <h1 className="font-bold text-[2.5rem] tracking-tighter text-white leading-[100%] mb-6 md:text-7xl md:mb-[3.75rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
               Nice to meet you! I&apos;m{" "}
               <span className="border-b-4 border-green">Adam Keyes</span>.
             </h1>
 
-            <p className="text-gray mb-6 md:max-w-[85%] lg:text-[1.25rem] xl:text-[1.25rem] 2xl:text-[1.25rem] lg:mb-[4.125rem] xl:mb-[4.125rem] 2xl:mb-[4.125rem]">
+            <p className="text-gray mb-6 md:max-w-[85%] xl:text-[1.25rem] 2xl:text-[1.25rem] xl:mb-[4.125rem] 2xl:mb-[4.125rem]">
               Based in the UK, I&apos;m a front-end developer passionate about
               building accessible web apps that users love.
             </p>
@@ -223,7 +223,7 @@ export default function Home() {
 
           <hr className="text-white" />
 
-          <section className="py-10 md:pt-[3.25rem] md:pb-[6.25rem] md:flex md:flex-wrap md:items-center md:gap-y-[3.25rem] lg:pt-[4.5rem] xl:pt-[4.5rem] 2xl:pt-[4.5rem] lg:pb-[8.75rem] xl:pb-[8.75rem] 2xl:pb-[8.75rem]">
+          <section className="py-10 md:pt-[3.25rem] md:pb-[6.25rem] md:flex md:flex-wrap md:items-center md:gap-y-[3.25rem] xl:pt-[4.5rem] 2xl:pt-[4.5rem] xl:pb-[8.75rem] 2xl:pb-[8.75rem]">
             {TECHNOLOGIES.map(({ name, experience }) => (
               <TechnologyItem key={name} name={name} experience={experience} />
             ))}
@@ -232,21 +232,21 @@ export default function Home() {
           <Image
             src={PatternRings}
             // Mobile: Needed to overide top from figma by adding 1 rem
-            className="absolute -z-20 top-[81.438rem] left-[11.813rem] h-[129px] md:top-[65.438rem] md:left-[35.625rem] lg:top-[67.313rem] xl:top-[67.313rem] 2xl:top-[67.313rem] lg:left-[71.813rem] xl:left-[71.813rem] 2xl:left-[71.813rem]"
+            className="absolute -z-20 top-[81.438rem] left-[11.813rem] h-[129px] md:top-[65.438rem] md:left-[35.625rem] xl:top-[67.313rem] 2xl:top-[67.313rem] xl:left-[71.813rem] 2xl:left-[71.813rem]"
             alt="Pattern of Rings"
           />
 
           <hr className="text-white md:hidden" />
 
-          <section className="py-20 text-white md:pt-0 md:pb-[6.25rem] lg:pb-[8.688rem] xl:pb-[8.688rem] 2xl:pb-[8.688rem]">
-            <div className="flex items-start justify-between mb-8 md:items-center md:mb-[3.75rem] lg:mb-20 xl:mb-20 2xl:mb-20">
-              <h2 className="text-[2.5rem] font-bold md:text-[4.5rem] lg:text-[5.5rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
+          <section className="py-20 text-white md:pt-0 md:pb-[6.25rem] xl:pb-[8.688rem] 2xl:pb-[8.688rem]">
+            <div className="flex items-start justify-between mb-8 md:items-center md:mb-[3.75rem] xl:mb-20 2xl:mb-20">
+              <h2 className="text-[2.5rem] font-bold md:text-[4.5rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
                 Projects
               </h2>
               <Button onClick={handleContactMeClick}>Contact Me</Button>
             </div>
 
-            <div className="flex flex-col gap-10 md:flex-row md:flex-wrap md:gap-x-[1.25rem] md:justify-between lg:gap-x-[1.875rem] xl:gap-x-[1.875rem] 2xl:gap-x-[1.875rem] lg:gap-y-[4.313rem] xl:gap-y-[4.313rem] 2xl:gap-y-[4.313rem]">
+            <div className="flex flex-col gap-10 md:flex-row md:flex-wrap md:gap-x-[1.25rem] md:justify-between xl:gap-x-[1.875rem] 2xl:gap-x-[1.875rem] xl:gap-y-[4.313rem] 2xl:gap-y-[4.313rem]">
               {PROJECTS.map((project) => (
                 <ProjectItem key={project.name} {...project} />
               ))}
@@ -255,11 +255,11 @@ export default function Home() {
         </main>
       </div>
 
-      <footer className="px-4 py-[3.75rem] bg-dark-gray md:px-8 md:pt-0 md:pb-[2.5rem] lg:px-0 xl:px-0 2xl:px-0 lg:pt-[5.25rem] xl:pt-[5.25rem] 2xl:pt-[5.25rem] relative">
-        <div className="w-full mx-auto max-w-[1440px] lg:px-[10.313rem] xl:px-[10.313rem] 2xl:px-[10.313rem]">
-          <div className="lg:flex lg:items-start lg:justify-between">
-            <div className="text-center mb-[3.125rem] md:pt-[3.75rem] md:px-[8.125rem] lg:px-0 xl:px-0 2xl:px-0 lg:py-0 xl:py-0 2xl:py-0 lg:mb-0 xl:mb-0 2xl:mb-0 lg:w-[445px] xl:w-[445px] 2xl:w-[445px]">
-              <h3 className="text-white text-[2.5rem] font-bold mb-[1.25rem] md:text-7xl lg:mb-[2.25rem] xl:mb-[2.25rem] 2xl:mb-[2.25rem] lg:text-[5.5rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
+      <footer className="px-4 py-[3.75rem] bg-dark-gray md:px-8 md:pt-0 md:pb-[2.5rem]  xl:px-0 2xl:px-0 xl:pt-[5.25rem] 2xl:pt-[5.25rem] relative">
+        <div className="w-full mx-auto max-w-[1440px] xl:px-[10.313rem] 2xl:px-[10.313rem]">
+          <div className="xl:flex xl:items-start xl:justify-between">
+            <div className="text-center mb-[3.125rem] md:pt-[3.75rem] md:px-[8.125rem] xl:px-0 2xl:px-0 xl:py-0 2xl:py-0 xl:mb-0 2xl:mb-0 xl:w-[445px] 2xl:w-[445px]">
+              <h3 className="text-white text-[2.5rem] font-bold mb-[1.25rem] md:text-7xl xl:mb-[2.25rem] 2xl:mb-[2.25rem] xl:text-[5.5rem] 2xl:text-[5.5rem]">
                 Contact
               </h3>
               <p className="text-gray md:text-[1.25rem]">
@@ -273,7 +273,7 @@ export default function Home() {
               <form
                 ref={formRef}
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="md:px-[8.125rem] lg:px-0 xl:px-0 2xl:px-0 lg:w-[445px] xl:w-[445px] 2xl:w-[445px]"
+                className="md:px-[8.125rem] xl:px-0 2xl:px-0 xl:w-[445px] 2xl:w-[445px]"
               >
                 <FormField
                   control={form.control}
@@ -349,7 +349,7 @@ export default function Home() {
 
           <Image
             src={PatternRings}
-            className="absolute bottom-[17.313rem] left-[-13rem] h-[129px] md:bottom-[8.125rem] md:left-auto md:right-[37.875rem] lg:right-[69.688rem] xl:right-[69.688rem] 2xl:right-[69.688rem]"
+            className="absolute bottom-[17.313rem] left-[-13rem] h-[129px] md:bottom-[8.125rem] md:left-auto md:right-[37.875rem] xl:right-[69.688rem] 2xl:right-[69.688rem]"
             alt="Pattern of Rings"
           />
         </div>
