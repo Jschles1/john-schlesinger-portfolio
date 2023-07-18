@@ -30,6 +30,7 @@ module.exports = {
       white: "hsl(0, 0%, 100%)",
       green: "hsl(153, 71%, 59%)",
       red: "hsla(7, 100%, 68%, 1)",
+      black: "hsl(0, 0%, 0%)",
     },
     extend: {
       keyframes: {
